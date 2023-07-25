@@ -1,38 +1,44 @@
-# TwoThreeFourTree
-
+# Data Structures
 ## Introduction
-This project was made as part of the course gegevensabstractie en -structuren It includes a 2-3-4 tree for which the 
-rules can be found in the following link (https://www.geeksforgeeks.org/2-3-4-tree/).
+This project was made as part of the course gegevensabstractie en -structuren. It includes several data structures
+that where discussed in the course:
 
-## Rules
-A 2-3-4 tree is a self-balancing data structure used to store and organize keys (and optionally associated values) in 
-a sorted manner. It is a variant of the B-tree, with the primary difference being that a 2-3-4 tree nodes can have two, 
-three, or four children, and the tree maintains the following rules to maintain balance:
+1. ADT Queue
+2. ADT Stack
+3. Binary Search Tree
+4. Doubly Circular Linked List (Chain) 
+5. Heap
+6. 2-3 Tree
+7. 2-3-4 Tree (contains bug)
 
-### Insertion:
+## How to run?
+To run this project, add the line "type=" followed by the datastructure you want to run to the "input.txt" file. This
+can be done multiple times in the file.
 
-1. Start at the root and find the appropriate leaf node where the new key should be inserted.
-2. If the leaf node has fewer than three keys, insert the new key into the leaf node while maintaining the keys in sorted order.
-3. If the leaf node already has three keys (full node):
-   - Perform a node split, creating a new node and moving the middle key up to the parent node (or create a new root if the parent is null).
-   - Distribute the two remaining keys and the new key among the three child nodes.
+1. "type=queue" for ADT Queue
+2. "type=stack" for ADT Stack
+3. "type=bst" for Binary Search Tree
+4. "type=chain" for Doubly Circular Linked List (Chain) 
+5. "type=heap" for Heap
+6. "type=23" for 2-3 Tree
+7. "type=234" for 2-3-4 Tree (contains bug)
 
-### Deletion:
+After this line, all the operations on this datastructure can be performed by adding:
+1. "insert {value}" for inserting a value
+2. "delete {value}" for deleting a value (the value is not always needed, example: stack)
+3. "print" to print the current state of the datastructure
 
-1. If the key to be deleted is in a leaf node, simply remove it from the leaf node.
-2. If the key to be deleted is in an internal node, replace it with the smallest key in the right subtree (or the largest key in the left subtree) and recursively delete the smallest (or largest) key from the appropriate subtree.
-3. If the deletion leads to an underflow in an internal node (less than two keys):
-   - If a neighboring sibling has more than two keys, perform a "borrow" operation by rotating keys from the sibling.
-   - If both the node and its siblings have two keys, perform a "fusion" operation by merging the node and one of its siblings into a single node and redistributing keys.
 
-### Retrieval:
+## Details
+### ADT Queue
+The abstract datatype queue or ADT queue  is a linear data structure that follows the First-In-First-Out (FIFO) 
+principle. It represents a collection of elements where elements are added to the back (rear) and removed from the 
+front (front). The elements that can be added to the ADT queue are all possible types (integer, float, double, string, 
+...).
 
-1. Start at the root and compare the search key with the keys in the current node.
-2. If the search key matches one of the keys in the node, the search is successful, and the associated value (if present) is retrieved.
-3. If the search key is less than the smallest key in the node, move to the left child and repeat the process.
-4. If the search key is greater than the largest key in the node:
-   - If the node has two children, move to the right child and repeat the process.
-   - If the node has three or four children, move to the rightmost child and repeat the process.
-
-### Dot:
-There is also a function to write a .dot file of the current 2-3-4 tree. 
+### ADT Stack
+### Binary Search Tree
+### Doubly Circular Linked List
+### Heap
+### 2-3 Tree
+### 2-3-4 Tree
