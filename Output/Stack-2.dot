@@ -1,0 +1,6 @@
+Graph G {
+bottom [shape=record]
+4 [shape=record]
+100 [shape=record]
+rankdir=LR
+}

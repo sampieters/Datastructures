@@ -1,0 +1,12 @@
+type=queue
+insert 1
+insert 3
+print
+
+type=stack
+insert 4
+insert 100
+insert 150
+print
+delete
+print
